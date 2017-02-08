@@ -4,16 +4,21 @@
             "version": "1.1.0",
             "type": "platform"
         },
-      "Microsoft.AspNetCore.Diagnostics": "1.1.0",
-      "Microsoft.AspNetCore.Server.IISIntegration": "1.1.0",
-      "Microsoft.Extensions.Logging.Debug": "1.1.0",
-      "Microsoft.AspNetCore.Server.Kestrel": "1.1.0",
-      "Microsoft.Extensions.Logging.Console": "1.1.0",
+        "Microsoft.AspNetCore.Diagnostics": "1.1.0",
         "Microsoft.AspNetCore.Mvc": "1.1.1",
-      "Microsoft.AspNetCore.Mvc.Formatters.Xml": "1.1.1",
-      "NLog.Extensions.Logging": "1.0.0-rtm-beta1",
-      "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
-      "Microsoft.Extensions.Configuration.Json": "1.1.0"
+        "Microsoft.AspNetCore.Mvc.Formatters.Xml": "1.1.1",
+        "Microsoft.AspNetCore.Routing": "1.1.0",
+        "Microsoft.AspNetCore.Server.IISIntegration": "1.1.0",
+        "Microsoft.AspNetCore.Server.Kestrel": "1.1.0",
+        "Microsoft.Extensions.Configuration.CommandLine": "1.1.0",
+        "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.1.0",
+        "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
+        "Microsoft.Extensions.Configuration.Json": "1.1.0",
+        "Microsoft.Extensions.Logging": "1.1.0",
+        "Microsoft.Extensions.Logging.Console": "1.1.0",
+        "Microsoft.Extensions.Logging.Debug": "1.1.0",
+        "Microsoft.Extensions.Options.ConfigurationExtensions": "1.1.0",
+        "NLog.Extensions.Logging": "1.0.0-rtm-beta1"
     },
 
     "tools": {
@@ -43,11 +48,17 @@
     "publishOptions": {
         "include": [
             "wwwroot",
+            "**/*.cshtml",
+            "appsettings.json",
             "web.config"
         ]
     },
 
     "scripts": {
         "postpublish": ["dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%"]
+    },
+
+    "tooling": {
+        "defaultNamespace": "CityInfo.API"
     }
 }
