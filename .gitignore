@@ -272,3 +272,4 @@ __pycache__/
 bin/
 obj/
 .DS_Store
+*.sln
